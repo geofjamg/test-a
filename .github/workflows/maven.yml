@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: list$
+        run: curl --request GET https://api.github.com/orgs/powsybl/repos
+
       - name: Build lib
         run: >
           curl -H "Accept: application/vnd.github.everest-preview+json"
