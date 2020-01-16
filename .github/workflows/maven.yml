@@ -13,14 +13,3 @@ jobs:
         with:
           token: ${{ secrets.MY_TOKEN }}
           event-type: lib_updated
-
-      - name: list
-        run: curl --request GET https://api.github.com/orgs/powsybl/repos
-
-      - name: Build lib
-        run: >
-          curl -H "Accept: application/vnd.github.everest-preview+json"
-          -H "Authorization: token ${{ secrets.MY_TOKEN }}"
-          --request POST
-          --data '{"event_type": "lib_updated"}'
-          https://api.github.com/repos/geofjamg/test-b/dispatches
