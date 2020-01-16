@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: list$
+      - name: Broadcast event
+        uses: geofjamg/broadcast-event@master
+        with:
+          token: ${{ secrets.MY_TOKEN }}
+          event-type: lib_updated
+
+      - name: list
         run: curl --request GET https://api.github.com/orgs/powsybl/repos
 
       - name: Build lib
