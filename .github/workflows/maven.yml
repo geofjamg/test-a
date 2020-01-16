@@ -11,5 +11,5 @@ jobs:
       - name: Broadcast event
         uses: geofjamg/broadcast-event@master
         with:
-          token: ${{ secrets.MY_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           event-type: lib_updated
