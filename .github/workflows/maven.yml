@@ -9,7 +9,8 @@ jobs:
 
     steps:
       - name: Broadcast event
-        uses: geofjamg/broadcast-event@master
+        uses: gridsuite/broadcast-event@add_orga
         with:
           token: ${{ secrets.MY_TOKEN }}
+          organizations: gridsuite
           event-type: lib_updated
