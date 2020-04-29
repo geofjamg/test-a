@@ -8,12 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Broadcast event
-        uses: gridsuite/broadcast-event@add_orga
-        with:
-          token: ${{ secrets.MY_TOKEN }}
-          organizations: gridsuite
-          event-type: lib_updated
       - name: toto
         run: echo ${RUNNER_OS}
         
